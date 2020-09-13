@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 100px;
+}
+
+
+.Banner {
+    position: relative;
+    min-height: 100vh;
+    background: url('img/backround.jpg');
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Banner h2 {
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.Banner h2 span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.Banner h3 {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.button {
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.nav {
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+header.nav .logo {
+    color: #111;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header.nav ul li a {
+    color: #111;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contentBox {
+    padding-right: 30px;
+}
+
+.contentBox h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+w50 {
+    min-width: 50%;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    min-width: 100%;
+}
+
+.card-img {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-img:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.skill .content .skillBox img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/*Responsive*/
+
+@media (max-width: 991px) {
+
+    header,
+    header.nav {
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    header ul li a {
+        color: #111;
+        font-size: 25px;
+        margin: 10px;
+
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background: url(img/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+
+    .toggle.active {
+        background: url(img/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+
+    header.nav .toggle {
+        filter: invert(1);
+    }
+
+    section {
+        padding: 10px 50px;
+    }
+
+    .Banner {
+        padding: 150px 50px 100px;
+    }
+
+    .Banner h2 {
+        font-size: 1.5em;
+    }
+
+    .Banner h3 {
+        font-size: 1em;
+    }
+
+    .button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .heading h2 {
+        font-size: 25px;
+    }
+
+    .contentBox h3 {
+        font-size: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .w50 {
+        margin-bottom: 20px;
+    }
+
+    .skill .content .skillBox {
+        margin: 10px;
+    }
+
+}
