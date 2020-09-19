@@ -276,6 +276,11 @@ img {
         flex-direction: column;
     }
 
+    .card {
+        margin: auto;
+        display: block;
+    }
+
     .w50 {
         margin-bottom: 20px;
     }
